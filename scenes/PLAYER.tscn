@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://duk3u5fjxpqgb"]
+
+[ext_resource type="Texture2D" uid="uid://8u5aveeb8x1v" path="res://assets/pong_paddle-02.png" id="1_eck3f"]
+[ext_resource type="Script" uid="uid://di1bptevm6awi" path="res://scripts/player.gd" id="1_l7w84"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_63dwh"]
+size = Vector2(124, 24)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_amxmc"]
+radius = 12.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1429072543]
+position = Vector2(72, 540)
+script = ExtResource("1_l7w84")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1310498950]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_eck3f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=765854346]
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_63dwh")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=863387860]
+position = Vector2(0, -62)
+shape = SubResource("CircleShape2D_amxmc")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="." unique_id=943190172]
+position = Vector2(0, 62)
+shape = SubResource("CircleShape2D_amxmc")

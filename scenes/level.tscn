@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://dtlmkffofw5td"]
+
+[ext_resource type="Script" uid="uid://c12op126rhajv" path="res://scripts/level.gd" id="1_mx8sn"]
+[ext_resource type="PackedScene" uid="uid://dhkyij3q6c7ct" path="res://scenes/ball.tscn" id="2_ppgk2"]
+[ext_resource type="PackedScene" uid="uid://duk3u5fjxpqgb" path="res://scenes/PLAYER.tscn" id="3_2r41h"]
+[ext_resource type="PackedScene" uid="uid://c8meiakcklq40" path="res://scenes/nme.tscn" id="4_klq6b"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_amxmc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_amxmc"]
+size = Vector2(1606, 15.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y0bwv"]
+size = Vector2(480.25, 1101)
+
+[node name="Level" type="Node" unique_id=1547622557]
+script = ExtResource("1_mx8sn")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=295554653]
+offset_right = 1696.0
+offset_bottom = 959.0
+color = Color(0, 0, 0, 1)
+
+[node name="SCOREPL" type="Label" parent="." unique_id=666154259]
+offset_left = 796.0
+offset_top = 111.0
+offset_right = 1060.0
+offset_bottom = 609.0
+text = "TEST"
+label_settings = SubResource("LabelSettings_amxmc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SCOREOP" type="Label" parent="." unique_id=1633501283]
+offset_left = 387.0
+offset_top = 111.0
+offset_right = 651.0
+offset_bottom = 609.0
+text = "TEST"
+label_settings = SubResource("LabelSettings_amxmc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ball" parent="." unique_id=1857022975 instance=ExtResource("2_ppgk2")]
+
+[node name="Player" parent="." unique_id=1429072543 instance=ExtResource("3_2r41h")]
+position = Vector2(72, 537)
+
+[node name="bounds" type="StaticBody2D" parent="." unique_id=945437844]
+position = Vector2(2, -360)
+
+[node name="up" type="CollisionShape2D" parent="bounds" unique_id=996724134]
+position = Vector2(720, 1072)
+shape = SubResource("RectangleShape2D_amxmc")
+
+[node name="down" type="CollisionShape2D" parent="bounds" unique_id=255437313]
+position = Vector2(726, 368)
+shape = SubResource("RectangleShape2D_amxmc")
+
+[node name="NME" parent="." unique_id=1732559465 instance=ExtResource("4_klq6b")]
+
+[node name="goalR" type="Area2D" parent="." unique_id=158171913]
+position = Vector2(2040, 0)
+
+[node name="goalbound" type="CollisionShape2D" parent="goalR" unique_id=994406546]
+position = Vector2(-250.125, 360)
+shape = SubResource("RectangleShape2D_y0bwv")
+
+[node name="goalL" type="Area2D" parent="." unique_id=565385779]
+
+[node name="goalbound" type="CollisionShape2D" parent="goalL" unique_id=1475556807]
+position = Vector2(-345, 360.5)
+shape = SubResource("RectangleShape2D_y0bwv")
+
+[node name="Timer" type="Timer" parent="." unique_id=1000749075]
+one_shot = true
+
+[connection signal="body_entered" from="goalR" to="." method="_on_goal_r_body_entered"]
+[connection signal="body_entered" from="goalL" to="." method="_on_goal_l_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

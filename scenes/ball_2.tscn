@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://sp4cl5m4pqkm"]
+
+[ext_resource type="Texture2D" uid="uid://c8j6hc76h6fl8" path="res://assets/pong_ball.png" id="1_hnt3w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3umpd"]
+radius = 16.0
+
+[node name="ball2" type="RigidBody2D" unique_id=1743235692]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=404603590]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_hnt3w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1093107601]
+shape = SubResource("CircleShape2D_3umpd")

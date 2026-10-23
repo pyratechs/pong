@@ -1,0 +1,17 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1792720286
+export_presets.cfg::TextFile::-1::1792709185::0::1::::<><><>0<>0<><>::
+::res://assets/::1792641291
+pong_ball.png::CompressedTexture2D::7109547490460422131::1792641058::1792641285::1::::<><><>0<>0<>f37c4fd7d6e9439b5e00ee9bfe34b95a<>res://.godot/imported/pong_ball.png-3e231e0d11ab5a8ab6eaedfe0eeb8a8d.ctex::
+pong_paddle-02.png::CompressedTexture2D::2359342014273231357::1792641032::1792641291::1::::<><><>0<>0<>2729a861b3f8d3f8c8375b4ba56a3578<>res://.godot/imported/pong_paddle-02.png-66d980a2e0ebc3c1d0fd4c7db593ed68.ctex::
+::res://BUILD/::1792709184
+::res://scenes/::1792720203
+ball.tscn::PackedScene::7672699744996945751::1792720203::0::1::::<><><>0<>0<><>::uid://c8j6hc76h6fl8::::res://assets/pong_ball.png<>uid://6l3kbydk270c::::res://scripts/ball.gd
+level.tscn::PackedScene::8516304968333272961::1792671841::0::1::::<><><>0<>0<><>::uid://c12op126rhajv::::res://scripts/level.gd<>uid://dhkyij3q6c7ct::::res://scenes/ball.tscn<>uid://duk3u5fjxpqgb::::res://scenes/PLAYER.tscn<>uid://c8meiakcklq40::::res://scenes/nme.tscn
+nme.tscn::PackedScene::7114102910365023339::1792670664::0::1::::<><><>0<>0<><>::uid://8u5aveeb8x1v::::res://assets/pong_paddle-02.png<>uid://ce10aglqlutro::::res://scripts/nme.gd
+PLAYER.tscn::PackedScene::8585420076920896725::1792670664::0::1::::<><><>0<>0<><>::uid://8u5aveeb8x1v::::res://assets/pong_paddle-02.png<>uid://di1bptevm6awi::::res://scripts/player.gd
+::res://scripts/::1792720186
+ball.gd::GDScript::2200280331559596204::1792720186::0::1::::<>CharacterBody2D<><>0<>0<><>::
+level.gd::GDScript::6654367734890276271::1792669364::0::1::::<>Node<><>0<>0<><>::
+nme.gd::GDScript::5108788821238471980::1792668368::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.gd::GDScript::7774535130784725836::1792672391::0::1::::<>CharacterBody2D<><>0<>0<><>::
